@@ -1,9 +1,11 @@
-const mongoose = reqiuire('mongoose');
+const mongoose = require('mongoose');
 
 const chatterSchema = mongoose.Schema({
   message:String,
   name:String,
-  timestamp:String
+  timestamp:String,
+  received:String
 })
 
-export default mongoose.model('messageContent',chatterSchema)
+module.exports = mongoose.model('messagecontents',chatterSchema)
+
